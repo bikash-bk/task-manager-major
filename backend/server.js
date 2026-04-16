@@ -1,10 +1,14 @@
 const express = require("express")
 const cors = require('cors')
-const dotenv = require('dotenv')
+require('dotenv').config();
+const ConnectDB = require('./db/Db')
 
-dotenv.config()
+
 
 const app = express()
+
+ConnectDB();
+
 
 app.use(express.json())
 
